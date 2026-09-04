@@ -228,7 +228,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       <span data-music-icon>${noteIcon}</span>
       <span class="music-control__pulse" aria-hidden="true"></span>
     </button>
-    <audio data-src="/music/our-song.mp3" preload="none" loop data-audio></audio>
+    <audio data-src="${import.meta.env.BASE_URL}music/our-song.mp3" preload="none" loop data-audio></audio>
   </div>
 `;
 

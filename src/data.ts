@@ -11,6 +11,8 @@ export type Memory = {
   date?: string;
 };
 
+const assetPath = (path: string): string => `${import.meta.env.BASE_URL}${path}`;
+
 // Edit, remove, or add milestones here.
 export const timeline: TimelineMilestone[] = [
   {
@@ -43,17 +45,17 @@ export const timeline: TimelineMilestone[] = [
 // "/images/our-first-photo.jpg". An empty or missing image shows a graceful placeholder.
 export const memories: Memory[] = [
   {
-    image: "/images/First-flower.jpg",
+    image: assetPath("images/First-flower.jpg"),
     caption: "The beginning of something beautiful",
     date: "Our first days",
   },
   {
-    image: "/images/image.png",
+    image: assetPath("images/image.png"),
     caption: "A moment I never want to forget",
     date: "A day with you",
   },
   {
-    image: "/images/photo_2025-09-04_03-39-19.jpg",
+    image: assetPath("images/photo_2025-09-04_03-39-19.jpg"),
     caption: "Everywhere feels like home with you",
   },
 ];
